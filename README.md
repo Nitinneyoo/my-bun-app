@@ -51,4 +51,41 @@ export default tseslint.config({
     ...reactDom.configs.recommended.rules,
   },
 })
+## Reminder App Features
+
+This app demonstrates a simple reminder management system built with React and TypeScript. Below are the key features:
+
+### Features
+- **Add Reminders**: Users can add new reminders with a title, description, and date.
+- **Edit Reminders**: Existing reminders can be edited to update their details.
+- **Delete Reminders**: Individual reminders can be deleted.
+- **Delete All Reminders**: Users can clear all reminders at once.
+- **Counter**: A simple counter to demonstrate state management.
+
+### Components
+- **App**: The main component that manages the state and renders the UI.
+- **ReminderList**: A child component that displays the list of reminders and provides options to delete or edit them.
+
+### State Management
+The app uses React's `useState` and `useCallback` hooks for managing state and optimizing performance.
+
+### Styling
+The app is styled using Tailwind CSS for a modern and responsive design.
+
+### Example Reminder Object
+```ts
+{
+  id: 1,
+  title: "Buy groceries",
+  description: "Milk, Bread, Eggs",
+  date: "2023-10-01",
+}
 ```
+
+### How to Use
+1. Add a new reminder by filling in the title, description, and date fields, then clicking "Add Reminder."
+2. Edit an existing reminder by clicking the "Edit" button next to it, updating the fields, and saving the changes.
+3. Delete a reminder by clicking the "Delete" button next to it.
+4. Clear all reminders by clicking the "Delete All" button.
+
+This app is a great starting point for learning React and TypeScript while building a functional and interactive UI.
