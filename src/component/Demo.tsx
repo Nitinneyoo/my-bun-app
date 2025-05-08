@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
-import Search from "../component/search";
+import Search from "../models/search";
 
 const allUsers = [
   "Nitin",
@@ -18,12 +18,12 @@ type DemoProps = {};
 export default function Demo({}: DemoProps) {
   const [users, setUsers] = useState(allUsers);
 
-  const handleSearch = (text: string) => {
+  const handleSearch = useCallback((text: string) => {
     const filteredUsers = allUsers.filter((user) =>
       user.toLowerCase().includes(text.toLowerCase())
     );
-    setUsers(filteredUsers);
-  };
+    setUsers(filteredUsers);  
+  },[]);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <h1 className="text-2xl font-bold mb-4">Search Users</h1>
